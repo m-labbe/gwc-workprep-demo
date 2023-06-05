@@ -5,7 +5,7 @@
 const request = require("supertest");
 const app = require("../app");
 
-describe('All-skills page bootstrap', () => {
+describe('Test routes', () => {
 
     it('Gets all users data', (done) => {
         request(app)
