@@ -10,5 +10,18 @@ router.get("/users", async (req, res) => {
   res.send(users);
 });
 
+const desiredUser = (u, i) => u.id === i;
+
+// remove user
+router.delete("/users/:id", async (req,res) =>
+{
+  var i = req.params.id; 
+  var u = users.findIndex(desiredUser, i);
+  users.splice(u, 1);
+  res.send(users);
+
+})
+
+
 
 module.exports = router;
